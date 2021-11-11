@@ -1,0 +1,697 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Dalilah_Restaurant
+  contact: {}
+host: localhost:3000
+basePath: /
+securityDefinitions: {}
+schemes:
+- http
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /users:
+    get:
+      summary: /users
+      tags:
+      - Users
+      operationId: /users
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: false
+        enum:
+        - application/json
+        type: string
+        description: ''
+      - name: x-access-token
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /users/1:
+    get:
+      summary: /users/IDuser
+      tags:
+      - Users
+      operationId: /users/IDuser
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: x-access-token
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /users/add:
+    post:
+      summary: /users/add
+      tags:
+      - Users
+      operationId: /users/add
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: false
+        enum:
+        - application/json
+        type: string
+        description: ''
+      - name: x-access-token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/~1users~1addrequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /users/1213:
+    delete:
+      summary: /users/IDuser1
+      tags:
+      - Users
+      operationId: /users/IDuser1
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: x-access-token
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /users/4323:
+    put:
+      summary: /users/IDUser
+      tags:
+      - Users
+      operationId: /users/IDUser
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: false
+        enum:
+        - application/json
+        type: string
+        description: ''
+      - name: x-access-token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/~1users~1IDUserRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /pedidos:
+    get:
+      summary: /pedidos
+      tags:
+      - Pedidos
+      operationId: /pedidos
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: x-access-token
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /pedidos/1:
+    get:
+      summary: /pedidos/IDpedidos
+      tags:
+      - Pedidos
+      operationId: /pedidos/IDpedidos
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: x-access-token
+        in: query
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /pedidos/add:
+    post:
+      summary: /pedidos/add
+      tags:
+      - Pedidos
+      operationId: /pedidos/add
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: false
+        enum:
+        - application/json
+        type: string
+        description: ''
+      - name: x-access-token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/~1pedidos~1addrequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /pedidos/456:
+    put:
+      summary: /pedidos/IDproducts
+      tags:
+      - Pedidos
+      operationId: /pedidos/IDproducts
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: false
+        enum:
+        - application/json
+        type: string
+        description: ''
+      - name: x-access-token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/~1pedidos~1IDproductsRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    delete:
+      summary: /pedidos/IDpedido
+      tags:
+      - Pedidos
+      operationId: /pedidos/IDpedido
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: false
+        enum:
+        - application/json
+        type: string
+        description: ''
+      - name: x-access-token
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /products:
+    get:
+      summary: /products
+      tags:
+      - Products
+      operationId: /products
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: x-access-token
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: x-access-token
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /products/1:
+    get:
+      summary: /products/IDproducts
+      tags:
+      - Products
+      operationId: /products/IDproducts
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: x-access-token
+        in: query
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /products/add:
+    post:
+      summary: /products/add
+      tags:
+      - Products
+      operationId: /products/add
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: false
+        enum:
+        - application/json
+        type: string
+        description: ''
+      - name: x-access-token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/~1products~1addrequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /products/12:
+    put:
+      summary: /products/IDproduct
+      tags:
+      - Products
+      operationId: /products/IDproduct
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: false
+        enum:
+        - application/json
+        type: string
+        description: ''
+      - name: x-access-token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/~1products~1IDproductRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    delete:
+      summary: /products/IDproduct
+      tags:
+      - Products
+      operationId: Delete/products/IDproduct
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: false
+        enum:
+        - application/json
+        type: string
+        description: ''
+      - name: x-access-token
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /auth/signin:
+    post:
+      summary: /auth/signin
+      tags:
+      - Auth
+      operationId: /auth/signin
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: false
+        enum:
+        - application/json
+        type: string
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/~1auth~1signinrequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /auth/signup:
+    post:
+      summary: /auth/signup
+      tags:
+      - Auth
+      operationId: /auth/signup
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: false
+        enum:
+        - application/json
+        type: string
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/~1auth~1signuprequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+definitions:
+  /users/addrequest:
+    title: /users/addrequest
+    example:
+      id: '4323'
+      usuario: martha100
+      nombre: Martha Salgado
+      correo: ms@gmail.com
+      celular: '30256586'
+      direccion: 'cr 4323 # asd'
+      contrasena: '123456'
+      rol: '2'
+    type: object
+    properties:
+      id:
+        type: string
+      usuario:
+        type: string
+      nombre:
+        type: string
+      correo:
+        type: string
+      celular:
+        type: string
+      direccion:
+        type: string
+      contrasena:
+        type: string
+      rol:
+        type: string
+    required:
+    - id
+    - usuario
+    - nombre
+    - correo
+    - celular
+    - direccion
+    - contrasena
+    - rol
+  /users/IDUserRequest:
+    title: /users/IDUserRequest
+    example:
+      usuario: martha1000
+      nombre: Martha Solandy Salgado
+      correo: ms@gmail.com
+      celular: '30256586'
+      direccion: 'cr 4323 # asd'
+      contrasena: '123456'
+      roles: 0
+    type: object
+    properties:
+      usuario:
+        type: string
+      nombre:
+        type: string
+      correo:
+        type: string
+      celular:
+        type: string
+      direccion:
+        type: string
+      contrasena:
+        type: string
+      roles:
+        type: integer
+        format: int32
+    required:
+    - usuario
+    - nombre
+    - correo
+    - celular
+    - direccion
+    - contrasena
+    - roles
+  /pedidos/addrequest:
+    title: /pedidos/addrequest
+    example:
+      id: 456
+      total: 3600
+      estado: 2
+      IdUsuario: 2
+      IdProducto: 1
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+      total:
+        type: integer
+        format: int32
+      estado:
+        type: integer
+        format: int32
+      IdUsuario:
+        type: integer
+        format: int32
+      IdProducto:
+        type: integer
+        format: int32
+    required:
+    - id
+    - total
+    - estado
+    - IdUsuario
+    - IdProducto
+  /pedidos/IDproductsRequest:
+    title: /pedidos/IDproductsRequest
+    example:
+      total: 3900
+      estado: 2
+      IdUsuario: 2
+      IdProducto: 1
+    type: object
+    properties:
+      total:
+        type: integer
+        format: int32
+      estado:
+        type: integer
+        format: int32
+      IdUsuario:
+        type: integer
+        format: int32
+      IdProducto:
+        type: integer
+        format: int32
+    required:
+    - total
+    - estado
+    - IdUsuario
+    - IdProducto
+  /products/addrequest:
+    title: /products/addrequest
+    example:
+      id: 12
+      nombre: Hamburguesa
+      precio: 4200
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+      nombre:
+        type: string
+      precio:
+        type: integer
+        format: int32
+    required:
+    - id
+    - nombre
+    - precio
+  /products/IDproductRequest:
+    title: /products/IDproductRequest
+    example:
+      nombre: Hamburguesa
+      precio: 43000
+    type: object
+    properties:
+      nombre:
+        type: string
+      precio:
+        type: integer
+        format: int32
+    required:
+    - nombre
+    - precio
+  /auth/signinrequest:
+    title: /auth/signinrequest
+    example:
+      correo: ds@gmail.com
+      contrasena: '123456'
+    type: object
+    properties:
+      correo:
+        type: string
+      contrasena:
+        type: string
+    required:
+    - correo
+    - contrasena
+  /auth/signuprequest:
+    title: /auth/signuprequest
+    example:
+      id: '1213'
+      usuario: DiegoS
+      nombre: Diego Sanchez
+      correo: ds@gmail.com
+      celular: '30256586'
+      direccion: 'cr 4323 # asd'
+      contrasena: '123456'
+    type: object
+    properties:
+      id:
+        type: string
+      usuario:
+        type: string
+      nombre:
+        type: string
+      correo:
+        type: string
+      celular:
+        type: string
+      direccion:
+        type: string
+      contrasena:
+        type: string
+    required:
+    - id
+    - usuario
+    - nombre
+    - correo
+    - celular
+    - direccion
+    - contrasena
+tags:
+- name: Users
+- name: Pedidos
+- name: Products
+- name: Auth
